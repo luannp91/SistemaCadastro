@@ -29,21 +29,6 @@ namespace SistemaCadastro
             comboEC.SelectedIndex = 0;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -51,7 +36,66 @@ namespace SistemaCadastro
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            int index = -1;
 
+            foreach (Pessoa pessoa in pessoas)
+            {
+                if (pessoa.Nome == txtName.Text)
+                {
+                    index = pessoas.IndexOf(pessoa);
+                }
+            }
+
+            if (txtName.Text == "")
+            {
+                MessageBox.Show("Preencha o campo Nome!!!");
+                txtName.Focus();
+                return;
+            }
+
+            if (txtPhone.Text == "")
+            {
+                MessageBox.Show("Preencha o campo Telefone!!!");
+                txtPhone.Focus();
+                return;
+            }
+
+            char sexo;
+
+            if (radioM.Checked)
+            {
+                sexo = 'M';
+            }
+            else if (radioF.Checked)
+            {
+                sexo = 'F';
+            }
+            else
+            {
+                sexo = 'O';
+            }
+
+            Pessoa p = new Pessoa();
+            p.Nome = txtName.Text;
+            p.DataNascimento = txtData.Text;
+            p.EstadoCivil = comboEC.SelectedItem.ToString();
+            p.Telefone = txtPhone.Text;
+            p.CasaPropria = checkHouse.Checked;
+            p.Veiculo = checkCar.Checked;
+            p.Sexo = sexo;
+
+            if (index < 0)
+            {
+                pessoas.Add(p);
+            }
+            else
+            {
+                pessoas[index] = p;
+            }
+
+            btnLimpar_Click(btnLimpar, EventArgs.Empty);
+
+            Listar();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
