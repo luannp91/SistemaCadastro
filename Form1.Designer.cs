@@ -39,9 +39,9 @@
             this.checkHouse = new System.Windows.Forms.CheckBox();
             this.checkCar = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioF = new System.Windows.Forms.RadioButton();
-            this.radioM = new System.Windows.Forms.RadioButton();
             this.radioO = new System.Windows.Forms.RadioButton();
+            this.radioM = new System.Windows.Forms.RadioButton();
+            this.radioF = new System.Windows.Forms.RadioButton();
             this.lista = new System.Windows.Forms.ListBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -155,16 +155,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sexo";
             // 
-            // radioF
+            // radioO
             // 
-            this.radioF.AutoSize = true;
-            this.radioF.Location = new System.Drawing.Point(6, 19);
-            this.radioF.Name = "radioF";
-            this.radioF.Size = new System.Drawing.Size(67, 17);
-            this.radioF.TabIndex = 0;
-            this.radioF.TabStop = true;
-            this.radioF.Text = "Feminino";
-            this.radioF.UseVisualStyleBackColor = true;
+            this.radioO.AutoSize = true;
+            this.radioO.Location = new System.Drawing.Point(6, 65);
+            this.radioO.Name = "radioO";
+            this.radioO.Size = new System.Drawing.Size(51, 17);
+            this.radioO.TabIndex = 2;
+            this.radioO.TabStop = true;
+            this.radioO.Text = "Outro";
+            this.radioO.UseVisualStyleBackColor = true;
             // 
             // radioM
             // 
@@ -177,16 +177,16 @@
             this.radioM.Text = "Masculino";
             this.radioM.UseVisualStyleBackColor = true;
             // 
-            // radioO
+            // radioF
             // 
-            this.radioO.AutoSize = true;
-            this.radioO.Location = new System.Drawing.Point(6, 65);
-            this.radioO.Name = "radioO";
-            this.radioO.Size = new System.Drawing.Size(51, 17);
-            this.radioO.TabIndex = 2;
-            this.radioO.TabStop = true;
-            this.radioO.Text = "Outro";
-            this.radioO.UseVisualStyleBackColor = true;
+            this.radioF.AutoSize = true;
+            this.radioF.Location = new System.Drawing.Point(6, 19);
+            this.radioF.Name = "radioF";
+            this.radioF.Size = new System.Drawing.Size(67, 17);
+            this.radioF.TabIndex = 0;
+            this.radioF.TabStop = true;
+            this.radioF.Text = "Feminino";
+            this.radioF.UseVisualStyleBackColor = true;
             // 
             // lista
             // 
